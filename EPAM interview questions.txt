@@ -1,0 +1,133 @@
+Student
+   name, age, roll
+
+Department
+   name, dean, students
+
+1. Write two new classes Student & Department
+2. Write a main method and do below:
+   a. Create 5 student objects
+   b. Create 2 departments (Physics, History)
+   C. Add some of the students to Physics and remaining to History
+   d. Remove one student from History department, fetch and print details of all the existing students of this department like below:
+
+   Name: Amit Bhandari, Age: 18, Roll: 7
+   Name: Sumit Vyas, Age: 19, Roll: 8
+   .....................................
+     
+  
+   Public Class Student{
+     private String name;
+     private int age;
+     private String roll;
+     
+     Student(String name, int age, String roll){
+       if(name!=null){
+       		this.name=name;
+       		this.age=age;
+       		this.roll=roll;
+       }
+     }
+   }
+
+  Public Class Department{
+     private String name;
+     private String dean;
+     public Student S1;
+    private List<String> deanDepartment;
+     private List<String> nameDepartment;
+     
+     Department(String name, String dean, Student S1){
+       		this.name=name;
+       		this.dean=dean;
+       		this.S1=S1;
+     }     
+    public addStudent(String name, String dean, Student S1){
+   
+      nameDepartment= new ArrayList<String>();
+      deanDepartment= new ArrayList<String>();
+      Student student = new Student(S1);
+      
+      nameDepartment.add(name);
+      deanDepartment.add(dean);    
+    }
+    public removeStudent(String name){
+      for (int i=0;i<nameDepartment.get(i).size();i++)
+      {
+        if (name.equals(nameDepartment.get(i).ignoreCase()){
+          nameDepartment.remove();
+          deanDepartment.
+        }
+            
+    
+   }
+
+  Public Class School{
+    
+    public static void main(String[] args)
+    {
+      
+      Student S1= new Student("Ankit",34, "A1");
+      Student S2= new Student("Amit Bhandari",18, "A2");
+      Student S3= new Student("Sumit Vyas",19, "A3");
+      
+      Department departmenPhysics = new Department("Physics","Pradeip",S1);
+      Department departmentHistory = new Department("History","Pradeip",S2);
+      departmentHistory = new Department("History","Pradeip",S2);
+
+    
+   }
+
+This new class came for review. What will be your recommendation / comments to the coder?
+
+public class Order {
+  //Fields and constructors
+  
+  public double calculateTotalAmount() {
+    double total = 0;
+    for (Product product : getProducts()) {
+      total += product.quantity * product.price;
+    }
+
+    // Apply country specific discounts
+    switch (user.getCountry()) {
+      case "IND": total *= 0.50; 
+	  break;
+      case "RUS": total *= 0.65; 
+	  break;
+      case "USA": total *= 0.80; 
+	  break;
+	  case "GER": total *= 0.90;      
+    }
+
+    return total;
+  }
+  
+  <html>
+.......
+.......
+
+	<div>
+ 	.........
+	<span>Hello World</span>
+	..............
+	.............
+ 		<span>Welcome to Jaipur</span>
+ 		<span>
+			<div id="newDiv"></div>
+ 		</span>
+.........
+ ................
+ 
+ 
+//*[@id=2]/preceding::p[2]
+//*[@id=2]/preceding-sibling::p[2]
+
+ 
+    
+ Write code snippet to validate the text displayed at line# 116
+Expected: Welcome to Jaipur
+Should get assertion error when displayed text doesn't match with expected
+Assume "driver" is initialized
+  
+String welcomeMessge=driver.findelement(By.xpath("//div[id='newDiv']")//precedeing::span[2]").getText();

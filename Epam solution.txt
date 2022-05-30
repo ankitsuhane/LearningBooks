@@ -1,0 +1,30 @@
+ public boolean solution(int[] A) {
+
+        boolean result=false;
+        if((A.length%2)!=0) {
+            return false;
+        }
+        else {
+            ArrayList<Integer> arrayList = new ArrayList<>();
+            for (int i : A)
+            {
+                arrayList.add(i);
+            }
+            int n=arrayList.size();
+
+            for(int i=0;i<n;i++){
+                result=false;
+                ArrayList<Integer> A1 = new ArrayList<>();
+                int x= arrayList.get(i);
+                for (int j = i+1; j < arrayList.size(); j++) {
+                    if(((x+arrayList.get(j))%2==1 )) {
+                        result =true;
+                        arrayList.remove(j);
+                        n=arrayList.size();
+                        break;
+                    }
+                }
+            }
+        }
+    return result;
+    }
